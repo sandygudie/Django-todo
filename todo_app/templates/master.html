@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+<header> <a style="color:white" href="/">Todo List</a></header>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

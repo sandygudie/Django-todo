@@ -1,0 +1,44 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Todo
+{% endblock %}
+
+{% block content %}
+  <main class="main">
+    
+    <h1>My Todos</h1>
+  
+    <ul class="todolist">
+    {% for todo in todolist %}
+     
+    <li class="todo">
+  
+        <p class="todo_date_time">{{todo.created_date}}</p>
+
+      <div class="todo_left">
+        {% if todo.is_complete == False %}
+        <input type="checkbox"/>
+        {% else %}
+        <input type="checkbox" checked/>
+        {% endif %} 
+     <div>
+      <p class="todo_title">{{todo.name}}</p>
+      <p class="todo_description">{{todo.description}}</p>
+     </div>
+      </div>
+     <div class="todo_action">
+      <a href="/update/{{todo.id}}">Edit</a>
+      <a href="/delete/{{todo.id}}">delete</a>
+     </div>
+    </li>
+  
+    {% endfor %}
+   </ul>
+   <div class="add_todo_link"><a href="/add/">New Todo</a></div>
+  </main>
+{% endblock %}
+
+
+
+

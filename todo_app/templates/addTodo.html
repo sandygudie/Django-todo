@@ -1,0 +1,22 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Todo
+{% endblock %}
+
+{% block content %}
+  <main class="main">
+    <h1>Add a Todo</h1>
+<form  method="post" class="form" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form }}
+  <input type="submit" style="display: block;margin-top: 10px;" value="Add" class="add_todo_btn">
+
+</form>
+  
+  </main>
+{% endblock %}
+
+
+
+

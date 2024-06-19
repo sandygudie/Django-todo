@@ -1,0 +1,106 @@
+body,
+html,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+a{
+  text-decoration: none;
+}
+header {
+  background-color: black;
+  padding: 0.5em 1em;
+  width: 100%;
+  color: white;
+  font-size: 30px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 50%;
+  margin: auto;
+}
+
+.form{
+padding-top: 1em;
+}
+
+form #description {
+  border-radius: 5px;
+  padding: 2em 1em;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+form #name {
+  border-radius: 5px;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+form button {
+  padding: 0.5em;
+  font-weight: 600;
+}
+
+.todolist {
+  margin: 1em 0;
+  width: 100%;
+}
+
+.add_todo_link a,
+.add_todo_btn,
+.delete_btn {
+  padding: 0.5em 1em;
+  border: 1px solid gray;
+  font-weight: 500;
+  color: black;
+  cursor: pointer;
+}
+
+.todo {
+  margin: 0.5em 0em;
+  gap: 5px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  padding: 1.5em 1em;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  position: relative;
+}
+
+.todo_date_time {
+  position: absolute;
+  top: 10px;
+  font-size: 12px;
+ right: 20px;
+}
+
+.todo_left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.todo_action a {
+  color: white !important;
+  padding-top: 0.5em;
+  font-size: 12px;
+  display: block;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+   width:90%
+  }
+}
